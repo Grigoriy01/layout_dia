@@ -1,0 +1,120 @@
+.site-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 32px;
+    height: 8px;
+    width: 18px;
+    padding: 3px 8px;
+    cursor: pointer;
+  }
+
+  &__btn-line {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+
+    transition: $transition-3;
+    transform-origin: center;
+  }
+
+  &__menu {
+    @extend %site-nav-menu-mobile;
+
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    width: 100vw;
+    height: 50vh;
+    background-color: $secondary-font-color;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__logo-img {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__link {
+    transition: $transition-3;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+
+  &--horizontal {
+    @include on-small-desktop {
+      flex-grow: 1;
+    }
+
+    .site-nav__btn {
+      @include on-small-desktop {
+        display: none;
+      }
+    }
+
+    .menu-desktop {
+      @include on-small-desktop {
+        opacity: 1;
+        background-color: transparent;
+        height: auto;
+        position: static;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(0);
+        padding: 0;
+        pointer-events: auto;
+      }
+    }
+
+    .list-desktop {
+      @include on-small-desktop {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+
+    &:checked {
+      ~ .site-nav__menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      + .site-nav__btn {
+        .site-nav__btn-line:first-child {
+          transform: translateY(2px) rotate(45deg);
+        }
+        .site-nav__btn-line:last-child {
+          transform: translateY(-2px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

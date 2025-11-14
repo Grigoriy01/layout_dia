@@ -1,19 +1,274 @@
 <!doctype html>
-<html lang="en">
+<html
+  class="page"
+  lang="en"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dia</title>
+    <title>Air</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/images/favicon_io/favicon-16x16.png"
+    />
+
     <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Dia</h1>
-    <script src="scripts/main.js"></script>
+
+  <body class="page__body">
+    <header class="header">
+      <div class="header-top">
+        <div class="header-top__inner">
+          <div class="site-nav site-nav--horizontal">
+            <a
+              class="site-nav__logo"
+              href="#"
+            >
+              <img
+                class="site-nav__logo-img"
+                src="./images/logo/logo-air.svg"
+                alt="Logo 'Air'"
+              />
+            </a>
+
+            <input
+              class="site-nav__toggle"
+              type="checkbox"
+              id="nav-toggle"
+            />
+
+            <label
+              class="site-nav__btn"
+              for="nav-toggle"
+            >
+              <span class="site-nav__btn-line"></span>
+              <span class="site-nav__btn-line"></span>
+            </label>
+
+            <div class="site-nav__menu menu-desktop">
+              <ul class="site-nav__list list-desktop">
+                <li class="site-nav__item item-desktop">
+                  <a
+                    href="#"
+                    class="site-nav__link"
+                  >
+                    About us
+                  </a>
+                </li>
+                <li class="site-nav__item item-desktop">
+                  <a
+                    href="#"
+                    class="site-nav__link"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li class="site-nav__item item-desktop">
+                  <a
+                    href="#"
+                    class="site-nav__link"
+                  >
+                    Testimonials
+                  </a>
+                </li>
+                <li class="site-nav__item item-desktop">
+                  <a
+                    href="#"
+                    class="site-nav__link"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="header-top__link-cta is-active"
+          >
+            Hire us
+          </a>
+        </div>
+      </div>
+
+      <div class="header-wrapper-row">
+        <div class="header-content">
+          <h1 class="header-content__title">Strategic Agency</h1>
+
+          <p class="header-content__text">
+            We believe in the power of bold ideas that can solve business
+            challenges.
+          </p>
+
+          <a
+            href="#"
+            class="header__btn btn"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="swiper header-bottom__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="swiper-slide__img"
+                src="./images/slider/slide-img-1.jpg"
+                alt="slide 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-slide__img"
+                src="./images/slider/testimonial-ava-2.jpg"
+                alt="slide 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-slide__img"
+                src="./images/slider/testimonial-ava-3.jpg"
+                alt="slide 3"
+              />
+            </div>
+          </div>
+          <div class="header-bottom__control">
+            <div class="wrapper-arrow">
+              <span class="header-bottom__btn header-bottom__btn--prev"></span>
+              <span class="header-bottom__btn header-bottom__btn--next"></span>
+            </div>
+            <div class="wrapper-content">
+              <div class="header-bottom__block-name block-name">INtro</div>
+              <p class="header-bottom__text">
+                By the same illusion which lifts the
+                <br />
+                horizon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="who-we-are title"></section>
+      <section class="expertise title"></section>
+      <section class="services title"></section>
+      <section class="testimonials title"></section>
+      <section class="results title"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="site-nav site-nav--footer">
+        <div class="site-nav__logo">
+          <a
+            class="logo-link"
+            href="#"
+          >
+            <img
+              class="logo-link__img"
+              src="./images/logo/logo-air.svg"
+              alt="Logo 'Air'"
+            />
+          </a>
+        </div>
+
+        <div class="site-nav__menu">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a
+                href="#"
+                class="site-nav__link"
+              >
+                About us
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                href="#"
+                class="site-nav__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                href="#"
+                class="site-nav__link"
+              >
+                Work
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                href="#"
+                class="site-nav__link"
+              >
+                Services
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                href="#"
+                class="site-nav__link"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="./scripts/main.js"
+      type="module"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,35 @@
+.header {
+  background-color: $bg-color-header;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  > :nth-child(2) {
+    margin-block: 48px;
+
+    @include on-tablet {
+      margin-top: 56px;
+      margin-bottom: 147px;
+    }
+
+    @include on-small-desktop {
+      margin-block: 0;
+    }
+  }
+
+  @include on-small-desktop {
+    position: relative;
+  }
+
+  .header-wrapper-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include content-inline-padding;
+    @extend %context-conteiner;
+  }
+}

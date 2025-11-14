@@ -1,0 +1,12 @@
+.page {
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  &__body {
+    line-height: 100%;
+    color: #fff;
+    margin: 0;
+
+    @extend %basic-font;
+  }
+}
