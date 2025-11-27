@@ -5,6 +5,26 @@
   }
 }
 
+@mixin hover-scale {
+  transition: $transition-3;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+@mixin hover-shadow {
+  transition:
+    transform $transition-3,
+    box-shadow $transition-3;
+
+  &:hover {
+    transform: scale(1.08);
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
 // screen breakpoint
 @mixin on-tablet {
   @media (min-width: $tablet) {

@@ -1,3 +1,4 @@
+/* stylelint-disable order/properties-order */
 .header-content {
   display: flex;
   flex-direction: column;
@@ -6,10 +7,7 @@
   @include on-small-desktop {
     margin-top: 158px;
     max-width: 370px;
-  }
-
-  @include on-desktop {
-    // margin-inline: auto;
+    z-index: 1;
   }
 
   & > :nth-child(2) {
@@ -28,12 +26,10 @@
     margin-top: 72px;
 
     @include on-tablet {
-      width: 264px;
       margin-top: 56px;
     }
 
     @include on-small-desktop {
-      width: 264px;
       margin-top: 83px;
     }
   }

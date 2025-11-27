@@ -1,1 +1,9 @@
-// empty
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @include on-tablet {
+    gap: 148px;
+  }
+}

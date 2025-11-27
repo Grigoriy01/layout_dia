@@ -1,7 +1,8 @@
 .header {
   background-color: $bg-color-header;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: $radius-primary;
+  border-bottom-right-radius: $radius-primary;
+  color: #fff;
   height: 100vh;
   overflow: hidden;
   display: flex;
