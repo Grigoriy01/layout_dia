@@ -1,5 +1,6 @@
 .who-we-are {
   @include content-inline-padding;
+
   @extend %context-conteiner;
 
   &__wrapper {
@@ -29,5 +30,6 @@
   &__text {
     width: 100%;
     text-align: center;
+    font-size: 24px;
   }
 }

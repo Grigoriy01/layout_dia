@@ -1,13 +1,12 @@
-/* stylelint-disable order/properties-order */
 .header-content {
   display: flex;
   flex-direction: column;
   width: 100%;
 
   @include on-small-desktop {
-    margin-top: 158px;
-    max-width: 370px;
     z-index: 1;
+    max-width: 370px;
+    margin-top: 158px;
   }
 
   & > :nth-child(2) {

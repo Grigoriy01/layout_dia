@@ -129,6 +129,11 @@
     &:focus {
       border-bottom-color: #144ed4;
     }
+
+    &--area {
+      overflow-y: hidden;
+      height: 41.5px;
+    }
   }
 
   &__contact-title {

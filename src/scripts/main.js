@@ -20,3 +20,14 @@ Swiper('.header-bottom__slider', {
   },
   speed: 800,
 });
+
+const toggle = document.getElementById('nav-toggle');
+document.querySelectorAll(
+  '.site-nav__menu .site-nav__link, .overlay'
+)
+  .forEach(
+    (el) => el.addEventListener(
+      'click', () => { toggle.checked = false; }
+    )
+  );
+

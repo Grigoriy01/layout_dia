@@ -26,11 +26,12 @@
   }
 
   .header-wrapper-row {
+    @extend %context-conteiner;
+
+    @include content-inline-padding;
+
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    @include content-inline-padding;
-    @extend %context-conteiner;
   }
 }

@@ -1,9 +1,8 @@
-/* stylelint-disable order/properties-order */
 .header-bottom {
-  width: 100%;
-  min-height: 0;
   display: flex;
   flex: 1 1 0;
+  width: 100%;
+  min-height: 0;
 
   @include on-small-desktop {
     position: absolute;
@@ -61,6 +60,12 @@
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: center;
+
+    transition: $transition-3;
+
+    &:hover {
+      background-color: #c0b9b9;
+    }
 
     &--prev {
       background-image: url(/src/images/slider/arrow-left-black.svg);

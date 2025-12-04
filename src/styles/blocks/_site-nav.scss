@@ -3,7 +3,26 @@
   display: flex;
   align-items: center;
 
+  .overlay {
+    pointer-events: none;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    transition: opacity 0.3s ease;
+  }
+
   &__btn {
+    position: relative;
+    z-index: 30;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,14 +36,15 @@
   }
 
   &__btn-line {
+    transform-origin: center;
+
     width: 100%;
     height: 2px;
-
-    background-color: #fff;
     border-radius: 2px;
 
+    background-color: #fff;
+
     transition: $transition-3;
-    transform-origin: center;
   }
 
   &__menu {
@@ -41,7 +61,6 @@
     backdrop-filter: blur(10px);
 
     border-top-left-radius: $radius-secondary;
-    border-bottom-right-radius: $radius-secondary;
     border-bottom-left-radius: $radius-secondary;
 
     opacity: 0;
@@ -50,7 +69,7 @@
       opacity 0.3s,
       transform 0.3s;
     pointer-events: none;
-    z-index: 5;
+    z-index: 20;
   }
 
   &__logo {
@@ -78,14 +97,17 @@
 
     &::after {
       content: '';
+
       position: absolute;
+      transform: scale(0);
 
       display: block;
+
       width: 100%;
       height: 1px;
+
       background-color: #fff;
 
-      transform: scale(0);
       transition: $transform-3;
     }
 
@@ -116,13 +138,14 @@
         background-color: transparent;
         height: auto;
         position: static;
-        width: 100%;
+        width: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         transform: translateY(0);
         padding: 0;
         pointer-events: auto;
+        margin: 0 auto;
       }
     }
 
@@ -141,10 +164,6 @@
     display: none;
 
     &:checked {
-      ~ .page__body--lock {
-        touch-action: none;
-        overflow: hidden;
-      }
       ~ .site-nav__menu {
         pointer-events: auto;
         transform: translateY(0);
@@ -153,10 +172,17 @@
       + .site-nav__btn {
         .site-nav__btn-line:first-child {
           transform: translateY(2px) rotate(45deg);
+          background-color: $cta-line;
         }
         .site-nav__btn-line:last-child {
           transform: translateY(-2px) rotate(-45deg);
+          background-color: $cta-line;
         }
+      }
+
+      ~ .overlay {
+        pointer-events: auto;
+        opacity: 1;
       }
     }
   }
@@ -184,6 +210,8 @@
     }
 
     .menu-desktop {
+      pointer-events: auto;
+
       position: static;
       transform: translateY(0);
 
@@ -193,9 +221,8 @@
       height: auto;
       padding: 0;
 
-      pointer-events: auto;
-      background-color: transparent;
       opacity: 1;
+      background-color: transparent;
     }
 
     .list-desktop {
